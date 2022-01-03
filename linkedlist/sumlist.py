@@ -5,3 +5,8 @@ def sumlist(head):
         total += current.value
         current = current.next
     return total
+
+
+# o(n) time complexity
+#O(1) space complexity
+
