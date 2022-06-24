@@ -19,6 +19,3 @@ def insert_node(head, value, index):
     count += 1
     current= current.next
   return head
-
-  #O(n) runtime
-  #O(1)space
