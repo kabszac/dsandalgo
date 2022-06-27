@@ -30,3 +30,6 @@ def createAdjencyList(edges):
     adjencyList[b].append(a)
     
   return adjencyList
+
+  #O(e) where e is the number of edges runtime
+  #O(n) space 
