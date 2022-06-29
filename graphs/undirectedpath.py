@@ -32,4 +32,4 @@ def createAdjencyList(edges):
   return adjencyList
 
   #O(e) where e is the number of edges runtime
-  #O(n) space 
+  #O(n) space complexity
