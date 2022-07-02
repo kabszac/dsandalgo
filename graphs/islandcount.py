@@ -34,4 +34,4 @@ def traverse(grid, r, c, visited):
   
   
 # O(rc) runtime
-#O(n) space 
+#O(rc) space 
