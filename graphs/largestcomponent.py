@@ -18,5 +18,25 @@ def traverse(graph, current, visited):
     size += traverse(graph,neighbor,visited)
   return size
 
+#iterative dfs
+# def traverse(graph, current, visited):
+#   if current in visited:
+#     return 0
+  
+#   visited.add(current)
+  
+#   stack = [current]
+#   size = 1 
+#   while stack:
+    
+#     node = stack.pop()
+    
+#     for neighbor in graph[node]:
+#       if neighbor not in visited:
+#         stack.append(neighbor)
+#         visited.add(neighbor)
+#         size += 1
+#   return size
+
   #O(n) space
   #O(e) runtime
