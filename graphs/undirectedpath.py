@@ -16,6 +16,23 @@ def helperfunc(graph, src, dst, visited):
       return True
   return False
 
+#DFS iterative
+# def helperfunc(graph, src, dst):
+#   stack = [src]
+#   st = set([src])
+  
+#   while stack:
+#     node = stack.pop()
+    
+#     if node == dst:
+#       return True
+    
+#     for neighbor in graph[node]:
+#       if neighbor not in st:
+#         stack.append(neighbor)
+#         st.add(neighbor)
+#   return False
+
 
 def createAdjencyList(edges):
   adjencyList = {}
