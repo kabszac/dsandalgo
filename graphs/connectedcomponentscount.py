@@ -16,6 +16,25 @@ def traverse(graph, current, visited):
   for neighbor in graph[current]:
     traverse(graph, neighbor, visited)
   return True
+
+#iterative dfs traversal
+# def traverse(graph, current, visited):
+#   if current in visited:
+#     return False
+  
+#   visited.add(current)
+  
+#   stack = [ current]
+  
+#   while stack:
+    
+#     node = stack.pop()
+    
+#     for neighbor in graph[node]:
+#       if neighbor not in visited:
+#         stack.append(neighbor)
+#         visited.add(neighbor)
+#   return True
   
 #O(n) space
 #O(e) run
