@@ -37,8 +37,8 @@ def createadjacencyList(edges):
   return adjacencyList
 
 
-#runtime linear
-# space linear
+#runtime linear O(e)
+# space linear O(e)
 
       
     
