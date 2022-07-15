@@ -82,4 +82,7 @@ def build_graph(num_courses, prereqs):
     #Time: O(p)
     #Space: O(c)
 
+    # same as longest path only difference our terminal nodes start at 1 because we are counting our nodes
+
+
 
