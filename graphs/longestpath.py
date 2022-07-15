@@ -20,7 +20,7 @@ def traverse(graph, start):
       stack.append((neighbor, distance+1))
   return max(st)
       
-#max's solution using dfs recursion
+#alvin solution using dfs recursion
 def longest_path(graph):
   distance = {}
   for node in graph:
@@ -44,6 +44,14 @@ def traverse_distance(graph, node, distance):
   
   distance[node] = 1 + largest
   return distance[node]
+
+#add your terminal nodes first
+#loop through each node in the graph and call your traverse function
+#check if it is already in our dict  if it is return the distance of the node
+# traverse through the neighbors and check for the lonest path
+# add it to our distance dict 
+# return the value of the distance of the node
+
 
 
   #O(e) runtime
