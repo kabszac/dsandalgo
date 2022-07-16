@@ -35,3 +35,8 @@ def traverse(grid, r, c, visited):
   
 # O(rc) runtime
 #O(rc) space 
+
+#check inbound
+#check if water
+#check if pos is visited
+#traverse neighbors
