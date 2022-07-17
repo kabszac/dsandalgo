@@ -125,6 +125,16 @@ def traversedfs(grid, row, col, visited):
   traversedfs(grid, row, col+1, visited)
   
   return visited
+
+
+#note
+#loop through the grid to find one island first
+# we use dfs algo check inbound, not W and not already visited
+# we add our first island to our new visited set and also add it tour queue with distance
+#perform bfs algo 
+# check if the pos is l
+# if not traverse more 
+
   
   
   
