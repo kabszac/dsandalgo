@@ -57,3 +57,92 @@ def traverse_island(grid, row, col, visited):
 # c = number of columns
 # Time: O(rc)
 # Space: O(rc)
+
+#mysolution
+
+from collections import deque
+
+def best_bridge(grid):
+  first_island = None
+  for r in range(len(grid)):
+    for c in range(len(grid[0])):
+      potential = traversedfs(grid, r, c, set())
+      if len(potential) > 0:
+        first_island = potential
+      
+  visited = set(first_island)
+  queue = deque([])
+  
+  for island in first_island:
+    r,c = island
+    queue.append((r,c,0))
+    
+    
+  while queue:
+    row, col, distance = queue.popleft()
+    
+    if grid[row][col] == 'L' and distance != 0:
+      return distance-1
+    
+    deltas = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    
+    for delta in deltas:
+      delta_row, delta_col = delta
+      new_row = delta_row + row
+      new_col = delta_col + col
+      new_pos = (new_row, new_col)
+      if inbound(grid, new_row, new_col) and new_pos not in visited:
+        queue.append((new_row, new_col, distance+1))
+        visited.add(new_pos)
+        
+
+      
+      
+      
+      
+def inbound(grid, r, c):
+  row_inbound = 0 <= r < len(grid)
+  col_inbound = 0 <= c < len(grid[0])
+  
+  return row_inbound and col_inbound
+      
+def traversedfs(grid, row, col, visited):
+  if not inbound(grid, row, col):
+    return visited
+  
+  if grid[row][col] == 'W':
+    return visited
+  
+  pos = (row, col)
+  if pos in visited:
+    return visited
+  
+  visited.add(pos)
+  
+  traversedfs(grid, row-1, col, visited)
+  traversedfs(grid, row+1, col, visited)
+  traversedfs(grid, row, col-1, visited)
+  traversedfs(grid, row, col+1, visited)
+  
+  return visited
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
