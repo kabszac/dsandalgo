@@ -12,3 +12,8 @@ def _non_adjacent_sum(nums, i, memo):
   exclude = _non_adjacent_sum(nums, i + 1, memo)
   memo[i] = max(include, exclude)
   return memo[i]
+
+
+# n = length of nums
+# Time: O(n)
+# Space: O(n)
