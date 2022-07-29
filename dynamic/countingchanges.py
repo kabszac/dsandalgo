@@ -2,8 +2,9 @@ def counting_change(amount, coins):
   return _counting_change(amount, coins , 0, {})
   
 def _counting_change(amount, coins , i, memo):
-  # if i in memo:
-  #   return memo[i]
+  key = (amount, i)
+  if key in memo:
+    return memo[key]
   if amount == 0:
     return 1
   
@@ -15,6 +16,13 @@ def _counting_change(amount, coins , i, memo):
   for amt in range(0, (amount//coin) + 1):
     rem = amount - (coin*amt)
     count += _counting_change(rem, coins, i+1, memo)
-    # memo[i] = count
+    
   
+  memo[key] = count 
   return count
+  
+  
+  
+  
+  
+
