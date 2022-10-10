@@ -15,3 +15,13 @@ def tree_min_value(root):
 
   #O(n) runtime
   #O(n) space
+
+# recursion
+def tree_min_value2(root):
+  if root is None:
+    return float("inf")
+
+  left_min_subtree_val = tree_min_value2(root.left)
+  right_min_subtree_val = tree_min_value2(root.right)
+
+  return min(root.val, left_min_subtree_val, right_min_subtree_val)
