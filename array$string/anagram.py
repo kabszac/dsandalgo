@@ -21,3 +21,17 @@ def anagrams(s1, s2):
     # m = length of string 2
     # Time: O(n + m)
     # Space: O(n + m)
+
+
+# structy solution
+# def anagram(s1,s2):
+#   return char_count(s1) == char_count(s2)
+# def char_count(s):
+#   dict = {}
+  
+#   for i in s:
+#     if s  not in dict:
+#       dict[s] = 1
+#     else:
+#       dict[s] += 1
+#   return dict

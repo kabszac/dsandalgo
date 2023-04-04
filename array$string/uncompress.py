@@ -16,4 +16,6 @@ def uncompress(s):
   #O(nm) largest group * number of grps(1000*2)
   #1000p1000q
 
+
+# remember to move forward j in else
   
